@@ -4,7 +4,8 @@ h1{color:grey;font-family:verdana}
 
 .maindiv {
     background-color: white;
-    color: black;
+    /* color: black; */
+    background-color: turquoise;
     width: 300px;
     padding: 20px;
     border-radius: 25px;
