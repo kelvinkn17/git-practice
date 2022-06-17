@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<title>Web App – Simple Interest Calculator</title>
+
+<script src="script.js"></script>
+
+<body>
+    <div style="display: flex; width: 100vw; min-height: 100vh; align-items: center; justify-content: center; flex-direction: column;">
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+
+            <!-- form start -->
+            <div class="form-item">
+                <div class="form-label">
+                    Amount
+                </div>
+                <input onchange="principalValidation()" type="number" id="principal"> 
+                <div id="principal-alert" style="font-size: 12px; color: red">
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="form-label">
+                    Rate
+                </div>
+                <input type="range" onchange="updateRate()" id="rate" min="1" max="20" step="0.25" value="10.25"> 
+                <span id="rate_val">
+                    10.25%
+                </span>
+            </div>
+
+            <div class="form-item">
+                <div class="form-label"> 
+                    No. of Years
+                </div>
+                <select id="years">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <!-- form end -->
+
+            <!-- submit button and result -->
+            <div style="margin-top: 16px">
+                <button onclick="compute()">Compute</button>
+                <div id="result" style="margin-top: 16px;">
+                </div>
+            </div>
+        </div>
+        
+        <footer style="margin-top: 10px; width: 300px;">
+            © Everyone Can Get Rich<br/>
+            This Calculator belongs to Kelvin
+        </footer>
+    </div>
+</body>
+
+</html>
